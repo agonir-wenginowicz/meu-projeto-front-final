@@ -1,50 +1,8 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Instituto Exemplo - Início</title>
-  <meta name="description" content="Plataforma de gestão e engajamento para ONGs">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header class="main-header">
-    <div class="container nav-bar">
-        
-        <div class="site-brand">
-            <img src="img/logo.svg" alt="Logotipo" class="site-logo">
-            <div>
-                <h1 class="site-title">Instituto Exemplo</h1>
-                <p class="muted site-subtitle">Transformando comunidades</p>
-            </div>
-        </div>
-        
-        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-controls="main-navigation">
-        
-        <label for="menu-toggle" class="menu-toggle-label">
-            <span class="hamb-icon"></span>
-        </label>
 
-        <nav class="nav-menu" id="main-navigation" aria-label="Principal">
-            <ul>
-                <li><a href="index.html" class="nav-link" data-path="index.html">Início</a></li> 
-                
-                <li class="nav-item-dropdown">
-                    <a href="projetos.html" class="nav-link" data-path="projetos.html">Projetos ▼</a> 
-    
-                    <ul class="submenu">
-                      <li><a href="projetos.html" class="nav-link" data-path="projetos.html">Ver Todos</a></li>
-                      <li><a href="#" class="nav-link" data-path="projetos.html#alfa">Projeto Alfa (Filtro)</a></li>
-                    </ul>
-                </li>
-                <li><a href="cadastro.html" class="nav-link" data-path="cadastro.html">Cadastro</a></li>
-                <li><a href="contato.html" class="nav-link" data-path="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
   
-  <main class="container" id="spa-content">
+  
     <section class="hero" aria-labelledby="hero-title">
       <h2 id="hero-title">Fazendo a diferença com tecnologia</h2>
       <p>Uma plataforma que ajuda ONGs a gerenciar projetos, captar recursos e engajar voluntários.</p>
@@ -56,7 +14,7 @@
         <article class="card col-12 col-md-4">
           <h4>Projetos em Andamento</h4>
           <p class="muted">Conheça nossas iniciativas recentes.</p>
-          <a href="projetos.html" class="btn btn-secondary">Ver Projetos</a>
+          <a href="projetos.html" class="btn btn-secondary nav-link" data-path="projetos.html">Ver Projetos</a>
         </article>
         <article class="card col-12 col-md-4">
           <h4>Seja Voluntário</h4>
@@ -103,16 +61,6 @@
       </div>
     </section>
 
-  </main>
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year">2025</span> Instituto Exemplo — Todos os direitos reservados.</p>
-    </div>
-  </footer>
-  
-  <script src="js/data.js"></script>
-  <script src="js/templates.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/spa.js"></script>
-</body>
+
+
 </html>

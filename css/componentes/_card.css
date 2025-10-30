@@ -25,3 +25,9 @@
     flex-grow: 1; /* Faz com que as descrições ocupem o espaço, alinhando os botões */
     margin-bottom: var(--spacing-2);
 }
+#project-list {
+	overflow: hidden;
+    /*overflow: auto;*/ 
+    /* ou use overflow: hidden; se não houver rolagem prevista */
+    /* ou use display: flow-root; (moderno) */
+}

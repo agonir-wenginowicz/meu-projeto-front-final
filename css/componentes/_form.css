@@ -29,6 +29,8 @@
 .form-group {
     display: flex;
     flex-direction: column;
+    gap:5px;
+    max-width: 500px;
     margin-bottom: var(--spacing-3);
 }
 
@@ -40,8 +42,8 @@
     gap: var(--spacing-2);
 }
 
-.form-group-checkboxes p {
-    margin-bottom: 0;
+.form-group-checkboxes label {
+    margin-left: 5px;
     font-weight: 500;
 }
 

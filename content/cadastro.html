@@ -1,0 +1,44 @@
+<section aria-labelledby="cadastro-title" class="form-section">
+    <h2 id="cadastro-title" class="site-title">Junte-se ao Instituto Exemplo</h2>
+    <p>Preencha o formulário abaixo para se cadastrar como voluntário ou para receber nossas novidades.</p>
+
+    <form id="form-cadastro" class="form-grid">
+        
+        <div id="form-alert" class="alert-container">
+            </div>
+
+        <div class="form-group">
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" required minlength="3" aria-describedby="name-help">
+            <small id="name-help" class="form-text muted">Mínimo de 3 caracteres.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Criar Senha:</label>
+            <input type="password" id="password" name="password" required minlength="6" aria-describedby="password-help">
+            <small id="password-help" class="form-text muted">A senha deve ter no mínimo 6 caracteres.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="area">Área de Interesse (Voluntariado):</label>
+            <select id="area" name="area">
+                <option value="educacao">Educação</option>
+                <option value="ambiente">Meio Ambiente</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="geral" selected>Geral / Outros</option>
+            </select>
+        </div>
+        
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Desejo receber a newsletter mensal do instituto.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large">Enviar Cadastro</button>
+    </form>
+</section>

@@ -1,5 +1,9 @@
 /* ===== ESTILOS DO MENU DE NAVEGAÇÃO ===== */
 
+#spa-content {
+    padding-top: 110px; 
+}
+
 /* Container principal do header */
 .main-header {
   background: #fff;
@@ -212,10 +216,7 @@
   }
 }
 
-/* ===== CORREÇÃO PARA O CONTEÚDO NÃO FICAR ATRÁS DO HEADER FIXO ===== */
-main {
-  margin-top: 80px; /* Ajuste conforme a altura do seu header */
-}
+
 
 /* Estilos auxiliares */
 .muted {
@@ -247,3 +248,4 @@ main {
   /* Adiciona uma margem inferior para afastá-lo do elemento posterior */
   margin-bottom: 60px; 
 }
+
