@@ -1,0 +1,27 @@
+/* ==================================== */
+/* 6. components/_card.css              */
+/* Sistema de Cards Responsivos         */
+/* ==================================== */
+
+.card {
+    display: flex; /* Uso de Flexbox para componentes internos */
+    flex-direction: column;
+    padding: var(--spacing-3);
+    background-color: var(--color-neutral-light);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Garante que o botão fique na parte inferior */
+    height: 100%; 
+}
+
+.card h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-1);
+    font-size: var(--font-size-h4);
+}
+
+.card p {
+    flex-grow: 1; /* Faz com que as descrições ocupem o espaço, alinhando os botões */
+    margin-bottom: var(--spacing-2);
+}

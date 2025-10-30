@@ -4,58 +4,103 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contato - Instituto Exemplo</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container site-brand">
-      <img src="img/logo.svg" alt="Logotipo">
-      <div>
-        <h1>Contato</h1>
-        <p class="muted">Fale conosco</p>
-      </div>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
+<header class="main-header">
+    <div class="container nav-bar">
+        
+        <div class="site-brand">
+            <img src="img/logo.svg" alt="Logotipo" class="site-logo">
+            <div>
+                <h1 class="site-title">Instituto Exemplo</h1>
+                <p class="muted site-subtitle">Transformando comunidades</p>
+            </div>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-controls="main-navigation">
+        
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="hamb-icon"></span>
+        </label>
+
+        <nav class="nav-menu" id="main-navigation" aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="projetos.html">Projetos ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">Projeto Alfa</a></li>
+                        <li><a href="#">Projeto Beta</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </div>
-  </header>
+</header>
+
   <main class="container">
-    <section>
-      <h2>Formulário de contato institucional</h2>
-      <form action="#" method="post" enctype="multipart/form-data">
-        <fieldset>
-          <legend>Informações</legend>
-          <label for="assunto">Assunto</label>
-          <input id="assunto" name="assunto" type="text" required>
+    
+    <div class="grid-12 main-content-layout">
 
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+      <section class="col-12 col-lg-8">
+        <h2>Formulário de contato institucional</h2>
+        
+        <form class="custom-form" action="#" method="post" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Informações</legend>
+            
+            <div class="form-group">
+                <label for="assunto">Assunto</label>
+                <input id="assunto" name="assunto" type="text" required>
+                <small class="validation-error">Preencha o assunto.</small>
+            </div>
 
-          <label for="anexo">Anexar arquivo (opcional)</label>
-          <input id="anexo" name="anexo" type="file" accept="image/*,application/pdf">
-        </fieldset>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                <small class="validation-error">A mensagem é obrigatória.</small>
+            </div>
 
-    <aside>
-      <h3>Assine nossa newsletter</h3>
-      <form action="#" method="post">
-        <label for="email-news">Email</label>
-        <input id="email-news" name="email" type="email" required>
-        <label><input type="checkbox" name="pref[]" value="eventos"> Eventos</label>
-        <label><input type="checkbox" name="pref[]" value="projetos"> Projetos</label>
-        <button type="submit">Assinar</button>
-      </form>
-    </aside>
+            <div class="form-group">
+                <label for="anexo">Anexar arquivo (opcional)</label>
+                <input id="anexo" name="anexo" type="file" accept="image/*,application/pdf">
+            </div>
+          </fieldset>
+          
+          <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="col-12 col-lg-4">
+        <h3 class="sidebar-title">Assine nossa newsletter</h3>
+        
+        <form class="custom-form sidebar-form" action="#" method="post">
+            <div class="form-group">
+                <label for="email-news">Email</label>
+                <input id="email-news" name="email" type="email" required>
+            </div>
+            
+            <div class="form-group form-group-checkboxes">
+                <p>Quero receber:</p>
+                <label class="checkbox-label"><input type="checkbox" name="pref[]" value="eventos"> Eventos</label>
+                <label class="checkbox-label"><input type="checkbox" name="pref[]" value="projetos"> Projetos</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-secondary">Assinar</button>
+            </div>
+        </form>
+      </aside>
+    </div>
   </main>
+
   <footer>
     <div class="container">&copy; <span id="year">2025</span> Instituto Exemplo</div>
   </footer>
-
 </body>
 </html>

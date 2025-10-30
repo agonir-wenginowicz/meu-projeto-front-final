@@ -1,0 +1,36 @@
+/* ==================================== */
+/* 7. components/_badge.css             */
+/* Sistema de Badges e Tags             */
+/* ==================================== */
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: var(--border-radius);
+}
+
+.badge-primary {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.badge-secondary {
+    color: white;
+    background-color: var(--color-secondary);
+}
+
+.badge-tertiary {
+    color: white;
+    background-color: var(--color-tertiary);
+}
+
+.badge-success { /* Exemplo de cor extra de feedback */
+    color: white;
+    background-color: #28a745; 
+}

@@ -1,0 +1,36 @@
+/* ==================================== */
+/* 10. pages/_home.css                  */
+/* Estilos específicos da Página Inicial */
+/* ==================================== */
+
+/* Estilo para a seção Hero */
+.hero {
+    padding: var(--spacing-6) 0;
+    text-align: center;
+    background-color: var(--color-neutral-light);
+    margin-bottom: var(--spacing-6);
+}
+
+.hero h2 {
+    font-size: var(--font-size-h1);
+    color: var(--color-primary-dark);
+}
+
+/* Estilo para a Galeria de Imagens (Flexbox e Grid combinados) */
+.gallery-grid {
+    /* O espaçamento (gap) já vem do grid-12 */
+    margin-bottom: var(--spacing-6);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

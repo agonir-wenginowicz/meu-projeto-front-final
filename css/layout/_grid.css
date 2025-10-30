@@ -1,0 +1,50 @@
+/* ==================================== */
+/* 3. layout/_grid.css                  */
+/* CSS Grid de 12 Colunas e Breakpoints */
+/* ==================================== */
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--spacing-2);
+}
+
+/* Sistema de Grid (12 Colunas) */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-3);
+}
+
+/* Definição de Colunas Padrão (Mobile First) */
+.col-12 { grid-column: span 12; }
+/* Exemplo de uso: <div class="grid-12"><div class="col-12 col-md-6 col-lg-4">...</div></div> */
+
+/* BREAKPOINTS RESPONSIVOS (Mínimo 5) */
+
+/* BP1: Mobile (Padrão 320px) - Não é necessário media query, pois é a base */
+
+/* BP2: Small (min-width: 576px) - Telefones Maiores/Paisagem */
+@media (min-width: 576px) {
+    .col-sm-6 { grid-column: span 6; }
+}
+
+/* BP3: Medium (min-width: 768px) - Tablets */
+@media (min-width: 768px) {
+    .col-md-4 { grid-column: span 4; }
+    .col-md-6 { grid-column: span 6; }
+}
+
+/* BP4: Large (min-width: 992px) - Desktops */
+@media (min-width: 992px) {
+    .col-lg-3 { grid-column: span 3; }
+    .col-lg-4 { grid-column: span 4; }
+}
+
+/* BP5: Extra Large (min-width: 1200px) - Grandes Monitores */
+@media (min-width: 1200px) {
+    .col-xl-2 { grid-column: span 2; }
+}

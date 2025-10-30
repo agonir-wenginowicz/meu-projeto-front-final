@@ -3,44 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Sobre a organização - Instituto Exemplo">
-  <title>Sobre - Instituto Exemplo</title>
+  <meta name="description" content="Página de Projetos do Instituto Exemplo">
+  <title>Projetos - Instituto Exemplo</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container site-brand">
-      <img src="img/logo.svg" alt="Logotipo">
-      <div>
-        <h1>Instituto Exemplo</h1>
-        <p class="muted">Nossa história</p>
-      </div>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
+<header class="main-header">
+    <div class="container nav-bar">
+        
+        <div class="site-brand">
+            <img src="img/logo.svg" alt="Logotipo" class="site-logo">
+            <div>
+                <h1 class="site-title">Instituto Exemplo</h1>
+                <p class="muted site-subtitle">Transformando comunidades</p>
+            </div>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-controls="main-navigation">
+        
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="hamb-icon"></span>
+        </label>
+
+        <nav class="nav-menu" id="main-navigation" aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="projetos.html">Projetos ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">Projeto Alfa</a></li>
+                        <li><a href="#">Projeto Beta</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </div>
-  </header>
+</header>
+  
   <main class="container">
-    <article>
-      <h2>Missão, visão e valores</h2>
-      <p>Texto explicativo sobre a organização.</p>
+    <article class="grid-12">
+      <div class="col-12 col-lg-8"> 
+        <h2>.</h2>
+      </div>
+      <aside class="col-12 col-lg-4">
+        <h3>Ações em Destaque</h3>
+        <p>Link para as últimas novidades.</p>
+      </aside>
     </article>
+
     <section>
       <h3>Projetos em Andamento</h3>
-      <div class="grid">
-        <div class="card"><h4>Este é o:</h4><p class="muted">projeto 01</p></div>
-        <div class="card"><h4>Este é o:</h4><p class="muted">projeto 02</p></div>
+      <div class="grid-12 card-list"> 
+        
+        <div class="card col-12 col-md-6 col-lg-4">
+          <h4>Este é o: <span class="badge badge-success">Concluído</span></h4>
+          <p class="muted">Projeto Alfa</p>
+          <p>Descrição do projeto e seus objetivos. O texto deve ser breve.</p>
+          <a href="#" class="btn btn-secondary">Detalhes</a>
+        </div>
+        
+        <div class="card col-12 col-md-6 col-lg-4">
+          <h4>Este é o: <span class="badge badge-primary">Em Andamento</span></h4>
+          <p class="muted">Projeto Beta</p>
+          <p>Descrição do projeto e seus objetivos. O texto deve ser breve.</p>
+          <a href="#" class="btn btn-secondary">Detalhes</a>
+        </div>
+        
+        <div class="card col-12 col-md-12 col-lg-4">
+          <h4>Este é o: <span class="badge badge-tertiary">Novo</span></h4>
+          <p class="muted">Projeto Gama</p>
+          <p>Descrição do projeto e seus objetivos. O texto deve ser breve.</p>
+          <a href="#" class="btn btn-secondary">Detalhes</a>
+        </div>
+
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container">
       <p>&copy; <span id="year">2025</span> Instituto Exemplo</p>
     </div>
   </footer>
-</body>
+  </body>
 </html>

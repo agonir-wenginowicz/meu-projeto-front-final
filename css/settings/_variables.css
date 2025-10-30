@@ -1,0 +1,37 @@
+/* ==================================== */
+/* 2. settings/_variables.css           */
+/* Design System: Cores, Tipografia, Espaçamento */
+/* ==================================== */
+
+:root {
+    /* 1. PALETA DE CORES (Mínimo 8) */
+    --color-primary: #007bff;          /* Primária: Ação/Interação */
+    --color-primary-dark: #0056b3;
+    --color-secondary: #28a745;        /* Secundária: Destaque/Sucesso */
+    --color-tertiary: #6f42c1;         /* Cor extra de apoio */
+    --color-neutral-light: #f8f9fa;    /* Neutra Clara: Backgrounds */
+    --color-neutral-medium: #6c757d;   /* Neutra Média: Textos secundários */
+    --color-neutral-dark: #343a40;     /* Neutra Escura: Texto principal */
+    --color-danger: #dc3545;           /* Feedback: Erro/Alerta */
+
+    /* 2. TIPOGRAFIA HIERÁRQUICA (Mínimo 5 tamanhos) */
+    --font-size-root: 16px;            /* Tamanho base (1rem) */
+    --font-size-h1: 3.052rem;          /* ~48.83px */
+    --font-size-h2: 2.441rem;          /* ~39.06px */
+    --font-size-h3: 1.953rem;          /* ~31.25px */
+    --font-size-h4: 1.563rem;          /* ~25px */
+    --font-size-base: 1rem;            /* 16px */
+    --font-size-small: 0.8rem;         /* ~12.8px */
+
+    /* 3. SISTEMA DE ESPAÇAMENTO MODULAR (Base 8px) */
+    --spacing-1: 0.5rem;   /* 8px */
+    --spacing-2: 1rem;     /* 16px */
+    --spacing-3: 1.5rem;   /* 24px */
+    --spacing-4: 2rem;     /* 32px */
+    --spacing-6: 3rem;     /* 48px */
+    --spacing-8: 4rem;     /* 64px */
+
+    /* Outras Propriedades */
+    --border-radius: 0.3rem;
+    --transition-speed: 0.3s;
+}

@@ -5,65 +5,116 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Oportunidades de voluntariado e formulário de inscrição">
   <title>Voluntariado - Instituto Exemplo</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container site-brand">
-      <img src="img/logo.svg" alt="Logotipo">
-      <div>
-        <h1>Voluntariado</h1>
-        <p class="muted">Participe conosco</p>
-      </div>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
+<header class="main-header">
+    <div class="container nav-bar">
+        
+        <div class="site-brand">
+            <img src="img/logo.svg" alt="Logotipo" class="site-logo">
+            <div>
+                <h1 class="site-title">Instituto Exemplo</h1>
+                <p class="muted site-subtitle">Transformando comunidades</p>
+            </div>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-controls="main-navigation">
+        
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="hamb-icon"></span>
+        </label>
+
+        <nav class="nav-menu" id="main-navigation" aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="projetos.html">Projetos ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">Projeto Alfa</a></li>
+                        <li><a href="#">Projeto Beta</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </div>
-  </header>
+</header>
+  
   <main class="container">
+    <div class="alert alert-success is-hidden" role="alert">
+      Cadastro realizado com sucesso! Em breve entraremos em contato.
+    </div>
+
     <section>
       <h2>Cadastro de Voluntário</h2>
-      <form id="form-vol" action="#" method="post" novalidate>
-        <fieldset>
+      <form id="form-vol" class="custom-form" action="#" method="post" novalidate>
+        
+        <fieldset class="grid-12">
           <legend>Dados pessoais</legend>
-          <label for="nome">Nome completo</label>
-          <input id="nome" name="nome" type="text" autocomplete="name" required>
+          
+          <div class="form-group col-12 col-lg-8">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <small class="validation-error">O nome é obrigatório.</small>
+          </div>
+          
+          <div class="form-group col-12 col-lg-4">
+            <label for="cpf">CPF</label>
+            <input id="cpf" name="cpf" type="text" data-mask="cpf" inputmode="numeric" required>
+            <small class="validation-error">CPF inválido.</small>
+          </div>
+          
+          <div class="form-group col-12 col-md-6">
+            <label for="nascimento">Data de nascimento</label>
+            <input id="nascimento" name="nascimento" type="date" required>
+          </div>
+          
+          <div class="form-group col-12 col-md-6">
+            <label for="tel">Telefone</label>
+            <input id="tel" name="tel" type="tel" data-mask="phone" inputmode="tel">
+          </div>
 
-          <label for="cpf">CPF</label>
-          <input id="cpf" name="cpf" type="text" data-mask="cpf" inputmode="numeric" required>
-
-          <label for="nascimento">Data de nascimento</label>
-          <input id="nascimento" name="nascimento" type="date" required>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
-
-          <label for="tel">Telefone</label>
-          <input id="tel" name="tel" type="tel" data-mask="phone" inputmode="tel">
+          <div class="form-group col-12">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <small class="validation-error">Email inválido.</small>
+          </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="grid-12">
           <legend>Endereço</legend>
-          <label for="cep">CEP</label>
-          <input id="cep" name="cep" type="text" data-mask="cep" inputmode="numeric">
-          <label for="cidade">Cidade</label>
-          <input id="cidade" name="cidade" type="text">
+          
+          <div class="form-group col-12 col-md-4">
+            <label for="cep">CEP</label>
+            <input id="cep" name="cep" type="text" data-mask="cep" inputmode="numeric">
+          </div>
+          
+          <div class="form-group col-12 col-md-8">
+            <label for="cidade">Cidade</label>
+            <input id="cidade" name="cidade" type="text">
+          </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="grid-12">
           <legend>Habilidades e disponibilidade</legend>
-          <label for="habil">Habilidades</label>
-          <input id="habil" name="habil" type="text" placeholder="ex: ensino, logística, comunicação">
-
-          <label for="disp">Disponibilidade semanal (horas)</label>
-          <input id="disp" name="disp" type="number" min="0" max="168">
+          
+          <div class="form-group col-12 col-md-8">
+            <label for="habil">Habilidades</label>
+            <input id="habil" name="habil" type="text" placeholder="ex: ensino, logística, comunicação">
+          </div>
+          
+          <div class="form-group col-12 col-md-4">
+            <label for="disp">Disponibilidade semanal (horas)</label>
+            <input id="disp" name="disp" type="number" min="0" max="168">
+          </div>
         </fieldset>
-
-        <button type="submit">Cadastrar</button>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Cadastrar Voluntário</button>
+          <button type="reset" class="btn btn-secondary">Limpar</button>
+        </div>
       </form>
     </section>
   </main>
