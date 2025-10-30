@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contato - Instituto Exemplo</title>
+</head>
+<body>
+  <header>
+    <div class="container site-brand">
+      <img src="img/logo.svg" alt="Logotipo">
+      <div>
+        <h1>Contato</h1>
+        <p class="muted">Fale conosco</p>
+      </div>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2>Formulário de contato institucional</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Informações</legend>
+          <label for="assunto">Assunto</label>
+          <input id="assunto" name="assunto" type="text" required>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+          <label for="anexo">Anexar arquivo (opcional)</label>
+          <input id="anexo" name="anexo" type="file" accept="image/*,application/pdf">
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <aside>
+      <h3>Assine nossa newsletter</h3>
+      <form action="#" method="post">
+        <label for="email-news">Email</label>
+        <input id="email-news" name="email" type="email" required>
+        <label><input type="checkbox" name="pref[]" value="eventos"> Eventos</label>
+        <label><input type="checkbox" name="pref[]" value="projetos"> Projetos</label>
+        <button type="submit">Assinar</button>
+      </form>
+    </aside>
+  </main>
+  <footer>
+    <div class="container">&copy; <span id="year">2025</span> Instituto Exemplo</div>
+  </footer>
+
+</body>
+</html>
